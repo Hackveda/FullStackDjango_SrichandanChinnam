@@ -18,3 +18,4 @@ virtualenv-clone==0.5.7
 zipp==3.6.0
 pymysql==0.10.1
 mysqlclient==2.0.1
+djangorestframework==3.12.4

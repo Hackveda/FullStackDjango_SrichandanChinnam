@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from .models import Student
 from django.shortcuts import render
 from .forms import StudentLoginForm
+from rest_framework.decorators import api_view
 
 def say_hello(request):
     print("abc")
@@ -18,6 +19,7 @@ def get_name(request, name):
     return HttpResponse(f'My Name is : {name}')
 
 
+@api_view(['POST'])
 def create_student(request):
    student = Student.objects.create(first_name='Preeti',last_name='M', address='3/1-20, WhiteField, Bangalore', pincode=511121 )
    return HttpResponse('Student is created')
@@ -51,7 +53,6 @@ def student_login(request):
             request.session['username'] = username
     else:
         my_login_form = StudentLoginForm()
-        print(my_login_form,";;;;;;;;;;;;")
     return render(request, 'student_loggedin.html', {"username" : username})
     
 
@@ -61,3 +62,5 @@ def check_user_access(request):
         return render(request, 'student_loggedin.html', {"username" : username})
     else:
         return render(request, 'student_login.html', {})
+
+

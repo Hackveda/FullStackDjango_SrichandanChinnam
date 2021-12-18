@@ -1,0 +1,7 @@
+./django_env
+django_env/
+./django_env/*
+
+*.pyc
+__pycache__/
+migrations/
