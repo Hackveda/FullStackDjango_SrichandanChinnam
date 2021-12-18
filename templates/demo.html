@@ -1,0 +1,44 @@
+<html>
+	<title>Demo Shivam</title>
+	
+	<script>
+			function getNumber() {
+				var date = new Date(document.getElementById("shivam").value)
+				var month = parseInt(date.getMonth()) + 1
+				console.log(date.getDate() + '-' + month + '-' + date.getFullYear())
+				
+			}
+	</script>
+	
+	
+   <body>
+        
+      <h1>Hi i am h1 tag</h1>
+	  <h2>Hi i am h2 tag</h2>
+	  <h3>Hi i am h3 tag</h3>
+	  <h4>Hi i am h4 tag</h4>
+	  <h5>Hi i am h5 tag</h5>
+	  <h6>Hi i am h6 tag</h6>
+	  
+	  <div style="display:inline; font-size: 32px;margin-left:20px; margin-top: 20px;">
+		<div style="display:inline-block; color: green;">Hello I am Shivam</div>
+		<div style="display:inline-block; color: red;">Hello I am Srichandan</div>
+	  </div>
+	  
+	  <div style="text-align:center;">
+			Hello
+	  </div>
+	  
+	  <div style="position:absolute;left:50%;">
+			Hello
+	  </div>
+	  
+	  <p>Hi, I am a paragraph</p>
+	  <div>Hi , i am under paragraph tag</div>
+	  
+	 <input id="shivam" type = "date"  placeholder = "Enter date" value="" name = "date" onchange=getNumber() />
+	  <input type="number" id="number" name="number" value=""/>
+	  <input type="text" id="text" name="text" value=""/>
+      
+   </body>
+</html>

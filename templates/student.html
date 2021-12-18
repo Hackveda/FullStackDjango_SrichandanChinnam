@@ -1,0 +1,58 @@
+<html>
+	
+   <body>
+        <script>
+			function getNumber() {
+				var length_of_phonenumber = document.getElementById("number").value
+				console.log(length_of_phonenumber.length)
+				if(length_of_phonenumber.length <= 10) {
+					document.getElementById("number").value = length_of_phonenumber
+				}else{
+					document.getElementById("number").value = ''
+				}
+			}
+	    </script>
+      <form name = "form"  method = "POST" >
+         <div style="left: 45%;position: absolute;">
+         <div style = "max-width:470px;">
+            <center>
+				<span style="color:red;"><b>Enter Username</b></span>
+               <input type = "text" style = "margin-left:20%;" 
+                  placeholder = "username" name = "username" />
+            </center>
+         </div>
+			
+         
+         <div style = "max-width:470px;">
+            <center>
+				<span>Enter Password</span>
+               <input type = "password" style = "margin-left:20%;" 
+                  placeholder = "password" name = "password" />
+            </center>
+         </div>
+		 
+		 <div style = "max-width:470px;">
+            <center>
+				<span>Enter Phone Number</span>
+               <input id="number" type = "number" style = "margin-left:20%;" 
+                  placeholder = "Enter phone number" value="" name = "phonenumber" onchange=getNumber() />
+            </center>
+         </div>
+			
+         
+         <div style = "max-width:470px;">
+            <center> 
+            
+               <button style = "border:0px; background-color:#4285F4; margin-top:8%;
+                  height:35px; width:80%;margin-left:19%;" type = "submit" 
+                  value = "Login" >
+                  <strong>Login</strong>
+               </button>
+               
+            </center>
+         </div>
+         </div>
+      </form>
+      
+   </body>
+</html>
