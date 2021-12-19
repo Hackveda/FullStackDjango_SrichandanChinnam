@@ -1,6 +1,6 @@
 
 from django.http import HttpResponse
-from .models import Student
+from .models import Student, Employee
 from django.shortcuts import render
 from .forms import StudentLoginForm
 from rest_framework.decorators import api_view
@@ -21,8 +21,19 @@ def get_name(request, name):
 
 @api_view(['POST'])
 def create_student(request):
-   student = Student.objects.create(first_name='Preeti',last_name='M', address='3/1-20, WhiteField, Bangalore', pincode=511121 )
+   data = request.data
+   first_name = data['first_name']
+   last_name = data['last_name']
+   address = data['address']
+   pincode = data['pincode']
+#    student = Student.objects.create(first_name='Surya',last_name='B', address='Old Area, Hyderabad', pincode=500005 )
+   student = Student.objects.create(first_name=first_name,last_name=last_name, address=address, pincode=pincode )
    return HttpResponse('Student is created')
+
+@api_view(['POST'])
+def create_employee(request):
+   emp = Employee.objects.create(empname='Shivam', empId= 10000123)
+   return HttpResponse('Employee is created')
 
 def no_of_students_in_class(request):
     students = Student.objects.all()

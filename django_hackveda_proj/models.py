@@ -9,3 +9,10 @@ class Student(models.Model):
     def __str__(self):
         return self.first_name + ' ' + self.last_name + " " +self.address + " " + str(self.pincode)
 
+
+class Employee(models.Model):
+    empname =  models.CharField(max_length=30)
+    empId = models.IntegerField(max_length=10)
+
+    def __str__(self):
+        return self.empname
