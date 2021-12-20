@@ -1,9 +1,10 @@
 
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from .models import Student, Employee
 from django.shortcuts import render
 from .forms import StudentLoginForm
 from rest_framework.decorators import api_view
+from .serializers import StudentSerializer
 
 def say_hello(request):
     print("abc")
@@ -26,9 +27,29 @@ def create_student(request):
    last_name = data['last_name']
    address = data['address']
    pincode = data['pincode']
-#    student = Student.objects.create(first_name='Surya',last_name='B', address='Old Area, Hyderabad', pincode=500005 )
    student = Student.objects.create(first_name=first_name,last_name=last_name, address=address, pincode=pincode )
    return HttpResponse('Student is created')
+
+@api_view(['PUT'])
+def update_student(request, id):
+   data = request.data
+   first_name = data['first_name']
+   last_name = data['last_name']
+   address = data['address']
+   pincode = data['pincode']
+   student = Student.objects.filter(id=id).update(first_name=first_name, last_name = last_name, address = address, pincode = pincode)
+   return HttpResponse('Student is updated successfully')
+
+@api_view(['DELETE'])
+def delete_student(request,id):
+    student = Student.objects.filter(id=id).delete()
+    return HttpResponse('Student is deleted successfully')
+
+@api_view(['GET'])
+def get_all_students(request):
+    students = Student.objects.all()
+    print(students)
+    return HttpResponse('All students got returned from Database')
 
 @api_view(['POST'])
 def create_employee(request):
@@ -38,7 +59,8 @@ def create_employee(request):
 def no_of_students_in_class(request):
     students = Student.objects.all()
     print(students)
-    return HttpResponse('No. of students got it from Database')
+    serializer = StudentSerializer(students, many=True)
+    return JsonResponse(serializer.data,safe=False)
 
 def only_student_info(request,id):
     student = Student.objects.get(pk=id)

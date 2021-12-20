@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import say_hello, say_shivam, get_name, create_student,create_employee,check_user_access, student_login, no_of_students_in_class, only_student_info,to_delete_student
+from .views import say_hello, say_shivam, get_name, create_student,create_employee,check_user_access, student_login, no_of_students_in_class, only_student_info,to_delete_student, update_student, delete_student, get_all_students
 
 from django.contrib.auth import views as auth
 
@@ -30,6 +30,9 @@ urlpatterns = [
     path('no_of_students_in_class', no_of_students_in_class),
     path('only_student_info/<str:id>',only_student_info),
     path('to_delete_student/<str:id>',to_delete_student),
+    path('update_student/<str:id>', update_student),
+    path('delete_student/<str:id>', delete_student),
+    path('get_all_students', get_all_students),
 
     path('connection/',check_user_access, name = 'loginform'),
 	path('student_login/', student_login, name = 'student_login'),
