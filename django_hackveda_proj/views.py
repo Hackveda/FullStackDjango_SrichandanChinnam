@@ -5,6 +5,38 @@ from django.shortcuts import render
 from .forms import StudentLoginForm
 from rest_framework.decorators import api_view
 from .serializers import StudentSerializer
+import numpy as np 
+import pandas as pd
+
+def create_numpy_array(request):
+    a = np.array(['Shivam','Srichandan', 'Sarath'])
+    b = pd.Series(a)
+    print(b)
+    return HttpResponse('Created Numpy Array')
+
+def create_pd_series_from_dict(request):
+    dict = {'a':1, 'b' : 2, 'c' : 3, 'd' : 4}
+    s = pd.Series(dict)
+    print(s)
+    return HttpResponse('create_pd_series_from_dict')
+
+def create_pd_df_from_list(request):
+    a = [1,2,3,4,5]
+    df = pd.DataFrame(a)
+    print(df)
+    return HttpResponse('create_pd_df_from_list')
+
+def create_pd_df_from_list_of_lists(request):
+    a = [['Alex',65],['Matturi',76],['Douguls',72]]
+    df = pd.DataFrame(a, columns = ['Name_1' , 'age_1'])
+    print(df)
+    return HttpResponse('create_pd_df_from_list_of_lists')
+
+def create_pd_df_from_dict_of_lists(request):
+    a ={'Name':['Alex','Matturi','Douguls'],'Age':[65,76,89]}
+    df = pd.DataFrame(a)
+    print(df)
+    return HttpResponse('create_pd_df_from_dict_of_lists')
 
 def say_hello(request):
     print("abc")

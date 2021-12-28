@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import say_hello, say_shivam, get_name, create_student,create_employee,check_user_access, student_login, no_of_students_in_class, only_student_info,to_delete_student, update_student, delete_student, get_all_students
+from .views import (say_hello, say_shivam, get_name, create_student,create_employee,check_user_access, student_login, no_of_students_in_class, only_student_info,to_delete_student, update_student, delete_student, get_all_students,create_numpy_array,
+            create_pd_series_from_dict, create_pd_df_from_list,create_pd_df_from_list_of_lists, create_pd_df_from_dict_of_lists)
 
 from django.contrib.auth import views as auth
 
@@ -36,5 +37,11 @@ urlpatterns = [
 
     path('connection/',check_user_access, name = 'loginform'),
 	path('student_login/', student_login, name = 'student_login'),
+
+    path('create_numpy_array/', create_numpy_array),
+    path('create_pd_series_from_dict/', create_pd_series_from_dict),
+    path('create_pd_df_from_list/', create_pd_df_from_list),
+    path('create_pd_df_from_list_of_lists/', create_pd_df_from_list_of_lists),
+    path('create_pd_df_from_dict_of_lists/', create_pd_df_from_dict_of_lists),
 
 ]
