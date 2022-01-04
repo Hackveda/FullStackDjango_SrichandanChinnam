@@ -1,0 +1,529 @@
+1) HTML Tags (sample1.html)
+		<!DOCTYPE html>  
+
+		<html>  
+		   <head> 
+			  <meta charset = "utf-8"> 
+			  <title>My HTML Page</title> 
+			  
+			   <style>
+					 .test {
+						position: relative;
+						left: 50%;
+						-webkit-transform: translateX(-20%);
+						-ms-transform: translateX(-20%);
+						transform: translateX(-20%);
+					 }
+				  </style>
+		   </head> 
+		  
+		   <body> 
+			  <header> 
+				 <h1>H1 Tag</h1> 
+				 <p>Paragraph Tag</p> 
+			  </header> 
+		   
+			  <nav class="test"> 
+				 <ul> 
+					<li><a href = "https://google.com">Google</a></li> 
+					<li><a href = "https://facebook.com">Facebook</a></li> 
+					<li><a href = "https://instagram.com">Instagram</a></li> 
+				 </ul> 
+			  </nav> 
+		   
+			  <article> 
+				 <section> 
+					<p>This is section tag</p>
+				 </section> 
+			  </article> 
+		   
+			 
+		   
+			  <footer> 
+				 <p>This is footer tag</p> 
+			  </footer> 
+		   
+		   </body> 
+		</html> 
+		
+2) HTML Table (sample2.html)
+
+	<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>table</title>  
+    <style>  
+        table{  
+            border-collapse: collapse;  
+            width: 100%;   
+        }  
+    th,td{  
+        border: 2px solid green;   
+        padding: 15px;  
+    }  
+               
+    </style>  
+  </head>  
+<body>  
+  <table>  
+    <tr>  
+        <th>Name</th>  
+        <th>Age</th>  
+        <th>College</th>  
+    </tr>  
+    <tr>  
+        <td>Srichandan</td>  
+        <td>24</td>  
+        <td>SNCE</td>  
+    </tr>  
+    <tr>  
+        <td>Sanjay</td>  
+        <td>30</td>  
+        <td>SWISS</td>  
+    </tr>  
+    <tr>  
+        <td>Prudhvi</td>  
+        <td>35</td>  
+        <td>PRINS</td>  
+    </tr>  
+</table>  
+</body>  
+</html>  
+
+
+3) HTML Links (sample3.html)
+	<a href="https://www.google.com">Google</a>
+	<a href="https://www.facebook.com">Facebook</a>
+	<a href="https://www.instagram.com">Instagram</a>
+	
+
+4) Loading Image (sample4.html)
+	<img src="facebookndinsta.jpg" alt="No Image" width="104" height="142">
+
+5) CSS (Cascading Style Sheet)
+		CSS can be added to HTML documents in 3 ways:
+
+		Inline - by using the style attribute inside HTML elements
+		Internal - by using a <style> element in the <head> section
+		External - by using a <link> element to link to an external CSS file
+	
+	Inline CSS:(sample5.html)
+		<h1 style="color:blue;">Hi</h1>
+		
+	Internal CSS : (sample6.html)
+		<!DOCTYPE html>
+			<html>
+			<head>
+			<style>
+			body {background-color: green;}
+			h1   {color: blue;}
+			p    {color: red;}
+			</style>
+			</head>
+			<body>
+
+			<h1>Hi</h1>
+			<p>Welcome to HTML & CSS</p>
+
+			</body>
+			</html>
+	
+	External CSS: (sample7.html)
+		<!DOCTYPE html>
+		<html>
+		<head>
+		  <link rel="stylesheet" href="styles.css">
+		</head>
+		<body>
+
+		<h1>Hi</h1>
+			<p>Welcome to HTML & CSS</p>
+
+		</body>
+		</html>
+
+6) Hover Concept (sanple8.html)
+
+	<!DOCTYPE html>
+	<html>
+	<head>
+	<style>
+	a:link, a:visited {
+	  background-color: #f44336;
+	  color: white;
+	  padding: 15px 25px;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	}
+
+	a:hover, a:active {
+	  background-color: green;
+	}
+	</style>
+	</head>
+	<body>
+
+	<a href="default.asp" target="_blank">This is a link</a>
+
+	</body>
+	</html>
+
+7) Apply CSS Styles by using class attribute (sample9.html)
+	<!DOCTYPE html>
+<html>
+<head>
+<style>
+.city {
+  background-color: tomato;
+  color: white;
+  border: 2px solid black;
+  margin: 20px;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+
+<div class="city">
+  <h2>Hi</h2>
+  <p>Welcome to the course</p>
+</div>
+
+<div class="city">
+  <h2>Python</h2>
+  <p>I am learning Python</p>
+</div>
+
+
+</body>
+</html>
+
+8) HTML with Javascript  (sample10.html)
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").style.fontSize = "25px"; 
+  document.getElementById("demo").style.color = "red";
+  document.getElementById("demo").style.backgroundColor = "yellow";        
+}
+</script>
+
+<button type="button" onclick="myFunction()">Click here</button>
+
+</body>
+</html>
+
+9) CSS Layout (sample11.html)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>CSS Layout Float</h2>
+<p>In this example, we have created a header, two columns/boxes and a footer. On smaller screens, the columns will stack on top of each other.</p>
+<p>Resize the browser window to see the responsive effect (you will learn more about this in our next chapter - HTML Responsive.)</p>
+
+<header>
+  <h2>Cities</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">London</a></li>
+      <li><a href="#">Paris</a></li>
+      <li><a href="#">Tokyo</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>London</h1>
+    <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+    <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+  </article>
+</section>
+
+<footer>
+  <p>Footer</p>
+</footer>
+
+</body>
+</html>
+
+
+
+10) CSS:
+	CSS is used to define styles for your web pages, design, layout and variations in display for different devices and screen sizes.
+	
+	Ex: with * selector
+	
+	The universal selector (*) selects all HTML elements on the page.
+	
+	<!DOCTYPE html> (sample12.html)
+	<html>
+	<head>
+	<style>
+	* {
+	  text-align: center;
+	  color: blue;
+	}
+	</style>
+	</head>
+	<body>
+
+	<h1>Hello world!</h1>
+
+	<p>Every element on the page will be affected by the style.</p>
+	<p id="para1">Me too!</p>
+	<p>And me!</p>
+
+	</body>
+	</html>
+
+
+	Ex: with background-color (sample13.html)
+		<!DOCTYPE html>
+		<html>
+		<head>
+		<style>
+		h1 {
+		  background-color: green;
+		}
+
+		div {
+		  background-color: lightblue;
+		}
+
+		p {
+		  background-color: yellow;
+		}
+		</style>
+		</head>
+		<body>
+
+		<h1>CSS background-color example!</h1>
+		<div>
+		This is a text inside a div element.
+		<p>This paragraph has its own background color.</p>
+		We are still in the div element.
+		</div>
+
+		</body>
+		</html>
+
+
+	Ex: Opacity / Transparency (sample14.html)
+		The opacity property specifies the opacity/transparency of an element. It can take a value from 0.0 - 1.0. The lower value, the more transparent.
+		
+		<!DOCTYPE html>
+		<html>
+		<head>
+		<style>
+		div {
+		  background-color: black;
+		  color : white;
+		}
+
+		div.first {
+		  opacity: 0.1;
+		}
+
+		div.second {
+		  opacity: 0.3;
+		}
+
+		div.third {
+		  opacity: 0.6;
+		}
+		</style>
+		</head>
+		<body>
+
+
+
+		<div class="first">
+		  <h1>opacity 0.1</h1>
+		</div>
+
+		<div class="second">
+		  <h1>opacity 0.3</h1>
+		</div>
+
+		<div class="third">
+		  <h1>opacity 0.6</h1>
+		</div>
+
+		<div>
+		  <h1>opacity 1 (default)</h1>
+		</div>
+
+		</body>
+	</html>
+	
+	Ex: background-image (sample15.html)
+		<!DOCTYPE html>
+		<html>
+		<head>
+		<style>
+		body {
+		  background-image: url("facebookndinsta.jpg");
+		  background-repeat: no-repeat !important;
+		}
+		</style>
+		</head>
+		<body>
+
+		<h1>Hello World!</h1>
+
+		<p>This page has an image as the background!</p>
+
+		</body>
+		</html>
+
+	Ex: Margins (sample16.html)
+		Margins are used to create space around elements, outside of any defined borders.
+
+		<!DOCTYPE html>
+		<html>
+		<head>
+		<style>
+		div {
+		  border: 1px solid black;
+		  margin-top: 100px;
+		  margin-bottom: 100px;
+		  margin-right: 150px;
+		  margin-left: 80px;
+		  background-color: lightblue;
+		}
+		</style>
+		</head>
+		<body>
+
+
+		<div>I am learning CSS</div>
+
+		</body>
+		</html>
+
+	Ex: Padding (sample17.html)
+		Padding is used to create space around an element's content, inside of any defined borders.
+
+		<!DOCTYPE html>
+		<html>
+		<head>
+		<style>
+		div {
+		  padding: 70px;
+		  border: 1px solid #4CAF50;
+		}
+		</style>
+		</head>
+		<body>
+
+		<div>I am learning CSS</div>
+
+		</body>
+		</html>
+
+	Ex: Height & Width Property (sample18.html)
+			<!DOCTYPE html>
+			<html>
+			<head>
+			<style>
+			div {
+			  height: 200px;
+			  width: 50%;
+			  background-color: powderblue;
+			}
+			</style>
+			</head>
+			<body>
+
+
+			<div>I am learning CSS</div>
+
+			</body>
+			</html>
+
+
+
+
+
+	
+	
+
