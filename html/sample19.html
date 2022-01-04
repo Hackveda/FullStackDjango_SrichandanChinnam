@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+<script>
+function varvsconstdiff() {
+
+  var name = "Shivam"
+  var age = 16
+  var salary = 10000.21
+  var is_student = true
+  console.log(name,age, salary, is_student,"before updating the values")
+
+  name = name + "Pandey"
+  salary = salary + 10000
+  is_student = false
+  console.log(name,salary, is_student, "after updating the values")
+
+  const name1 = "Shivam"
+  const age1 = 16
+  const salary1 = 10000.21
+  const is_student1 = true
+  console.log(name1, age1,salary1,is_student1)
+
+  name1 = name1 + "Pandey"
+  salary1 = salary1 + 10000
+  is_student1 = false
+  console.log(name1, salary1, is_student1)
+}
+
+function varvsletdiff() {
+
+      var area = 'Delhi'
+
+      function innerFunc() {
+        console.log(area,"area")
+      }
+      innerFunc()
+      {
+        var pincode = 521908
+        let pincode1 = 500021
+      }
+      console.log(pincode,"pincode")
+      console.log(pincode1)
+
+}
+</script>
+
+<button type="button" onclick="varvsconstdiff()">Var vs Const Diff.</button>
+<button type="button" onclick="varvsletdiff()">Var vs Let Diff.</button>
+
+</body>
+</html>

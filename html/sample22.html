@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+<script>
+function userDetails() {
+
+    var userData = {
+      "name" : "Shivam Pandey",
+      "age" : 28,
+      "school" : "SWISS"
+    }
+    console.log(userData["name"])
+    for(const item in userData) {
+      console.log(item,"==>", userData[item])
+    }
+}
+</script>
+
+<button type="button" onclick="userDetails()">Get User Details</button>
+
+</body>
+</html>

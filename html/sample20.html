@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+<script>
+function checkingSetTime() {
+
+    setTimeout(() => {
+      console.log("Calling after 10secs")
+    }, 10000)
+}
+
+
+function checkingSetInterval() {
+
+    setInterval( () => {
+      console.log("calling after every 10secs")
+    }, 10000)
+}
+
+</script>
+
+<button type="button" onclick="checkingSetTime()">SetTimeout</button>
+<button type="button" onclick="checkingSetInterval()">SetInterval</button>
+
+</body>
+</html>
