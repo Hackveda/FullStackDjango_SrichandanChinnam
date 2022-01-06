@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+	let add = {
+		num : 0,
+		calc : function() {
+
+			// logs the add object
+			document.write(this + 'Current Object ' + this.num + '<br>') // "this" points to calling object means add.
+			console.log(this,this.num)
+			function innerfunc() {
+				
+				this.salary += 1; // "this" points to global object, because this is in function invocation
+
+				// logs the window object
+				document.write(this + 'Window Object ' +this.salary + '<br>');
+				console.log(this)
+				return this.salary
+
+			} 
+			return innerfunc(); // function invocation
+		}
+};
+
+// logs NaN
+add.calc()
+// logs NaN
+add.calc()
+</script>				
+</body>
+</html>				

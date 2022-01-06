@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+			<html>
+			<body>
+			<script>
+				let fruit = function(person, color) {
+					this.person = person;
+					this.color = color;
+					this.displayInfo = function() {
+						document.write(this.person + " is " + this.color + '<br>');
+					}
+				}
+
+			let bindingObj
+				= {
+					// creating an object using object literal syntax
+					person : "Banana",
+					color : "Yellow",
+				}
+
+			// Constructor invocation to create an object fruit1
+			let fruit1
+				= new fruit("Orange", "orange");
+
+			// logs :Orange is orange
+			// Method invocation of displayInfo()
+			fruit1.displayInfo();
+
+			// binding the separated method to a new object
+			let newBound = fruit1.displayInfo.bind(bindingObj);
+
+			// logs : Banana is Yellow
+			newBound();
+			</script>					
+			</body>
+			</html>

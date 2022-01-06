@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input id="demo" type="text">
+<button type="button" onclick="checkMyInput()">Check Input</button>
+<p id="message"></p>
+
+<script>
+function checkMyInput() {
+  var message, x;
+  message = document.getElementById("message");
+  message.innerHTML = "";
+  x = document.getElementById("demo").value;
+  try { 
+    if(x == "")  throw "is Empty";
+    if(isNaN(x)) throw "not a number";
+    if(x > 10)   throw "too high";
+    if(x < 1)  throw "too low";
+  }
+  catch(err) {
+	console.log("abc",err)
+    message.innerHTML = "Input " + err;
+  }
+}
+</script>
+
+</body>
+</html>
+
+
+

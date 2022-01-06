@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+		let people = function(name,age) {
+			this.name = name
+			this.age = age
+			this.displayInfo = function() {
+				       document.write(this.name + " is " + this.age + " years old"); 
+			}
+		}
+		let person1 = new people('Ravi K', 31)
+		person1.displayInfo()
+	
+</script>				
+</body>
+</html>				

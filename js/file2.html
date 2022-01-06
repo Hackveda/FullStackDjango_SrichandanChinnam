@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<script>
+				// Gloabal variable declaration
+				var Name1="Outside Function by Shivam";   
+				  
+				// Function definition
+				function getData() {  
+					  
+					// Local variable declaration
+					var Name2 = "Inside Function";    
+					document.getElementById("globalandlocal").innerHTML =  "Getting data from " + Name1 + " and getting data from " + Name2 
+					document.write(Name1)
+				}  
+			</script>
+		</head>
+		
+		<body>
+			<p id="globalandlocal">Hello</p>
+			<button onclick=getData()>Click Here</button>
+		</body>
+			
+	</html>

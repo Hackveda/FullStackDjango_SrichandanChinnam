@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+		<html>
+		<body>
+		<script>
+			// Create two different objects to test call() and apply()
+			let banana = { person : 'Banana' };
+			let orange = { person : 'Orange' };
+			
+			function fruits(adj)
+			{
+				document.write(this + ' ');
+				return (this.person + " is " + adj + '<br>');
+			}
+
+		// call() and apply() will immediately invoke
+		// the function they are being called on
+
+		// logs : Banana is yummy
+		document.write(fruits.call(banana, 'yummy'));
+
+		// logs: Orange is sour
+		document.write(fruits.apply(orange, [ 'sour' ]));
+		</script>					
+		</body>
+		</html>													

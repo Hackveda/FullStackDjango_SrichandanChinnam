@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head>
+	<script>
+	function changeBackground() {
+		console.log("inside function")
+		var x = document.getElementById('bg');
+		x.style.backgroundColor = 'green';
+	}
+	</script>
+</head>
+<body>
+	<input id="bg" onkeyup="changeBackground()"
+	placeholder="write something" style="color:#fff">
+</body>
+</html>

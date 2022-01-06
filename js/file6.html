@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+	let person = {
+		name : "Ravi",
+		age : 31,
+		logInfo : function() { // Function you are defining as properties of objects
+			document.write(this.name + " is " + this.age + " years old "); // Here "this" refers to person object.
+		}
+	}
+	// logs Ravi is 31 years old
+	person.logInfo() //Method Invocation
+</script>				
+</body>
+</html>	

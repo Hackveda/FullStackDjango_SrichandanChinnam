@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+		<html>
+		<body>
+		<script>
+			let add = {
+				num : 0,
+				calc : function() { // method 
+
+					// logs the add object
+					console.log(this)
+					document.write(this + ' ')
+					this.num = this.num+1;
+					return this.num;
+				}
+			};
+
+		// logs 1
+		document.write(add.calc() + '<br>');
+		// logs 2
+		document.write(add.calc());
+		</script>				
+		</body>
+		</html>
+		
+					

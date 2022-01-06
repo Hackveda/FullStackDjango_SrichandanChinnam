@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+	<script>
+	function hov() {
+		var e = document.getElementById('hover');
+		e.style.backgroundColor = 'red';
+	}
+	
+	function leave() {
+		var e = document.getElementById('hover');
+		e.style.backgroundColor = 'green';
+	}
+	</script>
+</head>
+<body>
+	<div id="hover" onmouseover="hov()" onmouseout="leave()"
+	style="background-color:green;height:200px;width:200px;">
+	</div>
+</body>
+</html>

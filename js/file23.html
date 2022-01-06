@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+				<html>
+				<body>
+				<script>
+					let People = function(person, age) {
+						this.person = person;
+						this.age = age;
+						this.info = function() {
+
+							// logs People
+							document.write(this + ' ');
+
+							// here this=People
+							document.write(this.person + " is " + this.age +
+													" years old" + '<br>');
+						}
+					}
+
+				let person1
+					= new People('John', 21);
+
+				// logs : John is 21 years old
+				person1.info();
+
+				
+				let separated = person1.info.bind(person1);
+
+				// logs : undefined is undefined years old
+				separated();
+				</script>					
+				</body>
+				</html>
