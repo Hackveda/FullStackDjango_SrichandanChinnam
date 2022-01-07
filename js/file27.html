@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+	<html>
+
+	<body>
+		<script>
+			function checkingIfCondition() {
+					
+					var total_marks = 600
+					var shivam_marks = 525
+					
+					if((shivam_marks/total_marks)*100 >= 75) {
+						document.write("Shivam is first class Student")
+					}else if((shivam_marks/total_marks)*100 >= 50 && (shivam_marks/total_marks)*100 < 75) {
+						document.write("Shivam is second class Student")
+					}else if((shivam_marks/total_marks) * 100 >= 35 && (shivam_marks/total_marks)*100 < 50) {
+						document.write("Shivam is third class Student")
+					}else{
+						document.write("Shivam is failed")
+					}
+					
+					
+			}
+		
+		
+		</script>
+		<button type="button" onclick="checkingIfCondition()">Click Here</button>
+	</body>
+
+	</html>

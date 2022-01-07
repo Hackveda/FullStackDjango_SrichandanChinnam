@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+	<html>
+
+	<body>
+		<script>
+			function checkingBreakContinueKeywords() {
+					
+					var arr = [ "Shivam" , "Srichandan" , "Shalini" , "Reetu" , " Ravi" , "Pinku Das"] 
+					
+					for(var item of arr) {
+						
+						if(item == "Shalini") {
+							continue
+						}
+						document.write(item)
+						document.write("<br/>")
+					}
+					document.write("=================")
+					document.write("<br/>")
+
+					for(var item of arr) {
+						if(item == "Shalini") {
+							break
+						}
+						document.write(item)
+						document.write("<br/>")
+					}
+				
+					
+			}
+		
+		
+		</script>
+		<button type="button" onclick="checkingBreakContinueKeywords()">Click Here</button>
+	</body>
+
+	</html>

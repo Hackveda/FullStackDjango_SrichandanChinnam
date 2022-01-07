@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+	<html>
+
+	<body>
+		<script>
+			function checkingForLoop() {
+				
+				var shivam_obj = {
+						"name": 'Amitav',
+						"age": 24,
+						"address" : "1-212, Near GandhiChowk, Delhi",
+						"Class" : "6thClass",
+						"designation": 'Software Engineer'
+				}				
+					
+				
+				for(var item in shivam_obj) {
+					document.write(item, "==>", shivam_obj[item])
+					document.write("<br/>")
+				}
+				
+				
+				var arr = [ "Shivam" , "Srichandan" , "Shalini" , "Reetu" , " Ravi" , "Pinku Das"] 
+				
+				for(var name of arr) {
+					document.write(name)
+					document.write("<br/>")
+				}
+					
+			}
+		
+		
+		</script>
+		<button type="button" onclick="checkingForLoop()">Click Here</button>
+	</body>
+
+	</html>
